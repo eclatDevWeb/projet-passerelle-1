@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
+    <title>Le Jeu Du Pendu</title>
+</head>
+<body>
+    <header>
+        <h1>Le Jeu du Pendu</h1>
+    </header>
+    <main>
+        <div id="jeu">
+            <img id="pendu" src="./image/pendu-0.png" alt="image_jeu_du_pendu">
+            
+            <p id="mot"></p>
+            <div class="resultat"></div>
+            <form id="champs">
+                <label for="texte-rempli">Entrez une lettre OU le bon mot (en minuscule)</label>
+                <div >
+                    <input type="text" id="texte-rempli" placeholder="Une lettre / LE MOT">
+                    <button>go</button>
+                </div>
+            </form>
+            <div id="rejouer">Cliquez-ici pour rejouer</div>
+            <div id="faux">
+                <h2>Les erreurs:</h2>
+                <div id="flex-fish">
+                    <span id="non"></span>
+                    <img id="poisson" src="./image/queue-poisson.png"></img>
+                </div>
+            </div>
+           
+        </div>
+        <audio id="#pression"  loop>
+                <source src="./audio/HMNHart_Battement de coeur 3 (ID 0770)_LS.mp3" type="audio/mp3">
+                <source src="./audio/HMNHart_Battement de coeur 3 (ID 0770)_LS.wav" type="audio/wav">
+                <source src="./audio/HMNHart_Battement de coeur 3 (ID 0770)_LS.flac" type="audio/flac">
+        </audio>
+        
+    </main>
+
+    <footer> <span id="copyright"></span></footer>
+    <script src="pendu.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Pacifico&family=Roboto:wght@100;300;400;700&display=swap');
+:root {
+    --bgd-color: #fffffe;
+    --bk-color: #6f104c;
+    --op-color: #cd5738;
+    --happy-color: rgb(246, 179, 10);
+    --happy-color-opacity8: rgba(246, 179, 10, 0.8);
+}
+
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bgd-color);
+}
+header, footer{
+    background: var(--bk-color);
+    color: var(--happy-color);
+}
+
+h1 {
+    font-family: 'pacifico', 'Times New Roman', Times, serif;
+    text-align: center;  
+}
+
+main {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-grow: 1;
+    text-align: center;
+    justify-content: center;
+}
+#jeu {
+    padding: 2em 0;
+}
+#mot {
+    margin: 0.3em 0 0.3em 0;
+    font-size: 2em;
+    font-family: 'roboto', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-decoration-color: black;
+    
+}
+#jeu img {
+    max-width: 100%;
+}
+#rejouer {
+    background-color: var(--happy-color);
+    display: flex ;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'pacifico', Arial, Helvetica, sans-serif;
+    max-width: 50%;
+    margin: 0.9rem auto;
+    padding: 0.5em 0.5em 0.7em 0.5em;
+}
+form, .resultat {
+    max-width: 100%;
+    background-color: var(--op-color);
+    border-radius: 4px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:0.6em;
+    font-family: 'pacifico', Arial, Helvetica, sans-serif;
+
+}
+form div {
+    display: flex;
+    align-items: center;
+}
+.resultat {
+    font-size: 1.3em;
+}
+input {
+    border-radius: 8px;
+    border: none;
+    padding: 0.2em;
+    margin-right: 0.5rem;
+    font-size: 1.3em;
+    text-align: center;
+}
+button{
+    border-radius: 30% 30% 10%;
+    padding: 0.7em 1em;
+    border: none;
+    background-color: var(--happy-color);
+}
+button:hover, #rejouer:hover {
+    
+    cursor: pointer;
+    background: var(--happy-color-opacity8);
+}
+
+#faux h2{
+    margin: 0.4rem 0;
+    font-family: 'pacifico', 'Times New Roman', Times, serif;
+}
+#non {
+    font-size: 2em;
+    font-family: 'roboto', Arial, Helvetica, sans-serif;
+    border-radius: 50%;
+    padding: 0.1em 0.4em 0.3em 0.4em;
+    background-color: var(--happy-color);
+    
+}
+#flex-fish {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#poisson {
+    margin-bottom: 0.5rem;
+    display: none;
+}
+
+footer {
+    font-family: 'roboto', sans-serif;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
+.coeur {
+    
+    box-shadow: 0 0 0 3500px rgba(255, 71, 84, .7);
+    animation: battement 1.8s infinite cubic-bezier(.66, 0, 0, 1);
+}
+
+@keyframes battement {
+    to {
+      box-shadow: 0 0 0 3500px rgba(255, 71, 84, 0);
+    }
+  }
