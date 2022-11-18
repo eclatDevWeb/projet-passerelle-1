@@ -175,4 +175,7 @@ footer {
     #rejouer {
         max-width: 70%;
     }
+    footer {
+        padding: 0.5em;
+    }
 }
