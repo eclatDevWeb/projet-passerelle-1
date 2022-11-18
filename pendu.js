@@ -47,7 +47,7 @@ let champs = document.querySelector("#champs");
 let fish = document.querySelector("#flex-fish");
 
 // un peu de sons
-let pression = document.getElementById("#pression");
+let pression = document.getElementById("pression");
 
 let clap = document.createElement('audio');
 if(clap.canPlayType('audio/mpeg')) {
@@ -60,6 +60,18 @@ if (cri.canPlayType('audio/mpeg')) {
     cri.setAttribute('src','./audio/cri-moins-fort.mp3');
 } else if (cri.canPlayType('audio/ogg')) {
     cri.setAttribute('src','./audio/cri-moins-fort.ogg');
+}
+let machine = document.createElement('audio');
+if (machine.canPlayType('audio/mpeg')) {
+    machine.setAttribute('src','./audio/machine-a-ecrire.mp3');
+} else if (machine.canPlayType('audio/ogg')) {
+    cri.setAttribute('src','./audio/machine-a-ecrire.ogg');
+}
+let crayon = document.createElement('audio');
+if (crayon.canPlayType('audio/mpeg')) {
+    crayon.setAttribute('src','./audio/crayon-papier.mp3');
+} else if (crayon.canPlayType('audio/ogg')) {
+    crayon.setAttribute('src','./audio/crayon-papier.ogg');
 }
 
 let nombreAleatoire;
@@ -100,12 +112,19 @@ function jeu() {
     }
     
 }
+
 btn.addEventListener('click', (e) => {
     e.preventDefault();
     reponse = input.value;
+    // on pense au utilisateurs de mobile -----
+    if( reponse !== reponse.toLowerCase()) {
+        reponse = reponse.toLowerCase();
+    }
+    // ----------------------------------------
     verifierCaractere();
     input.value = "";   
 });
+
 rejouer.addEventListener('click', () => {
     
     jeu()
@@ -126,7 +145,7 @@ function afficherResultat() {
 function victoire() {
     desactiverBattement();
     clap.play();
-    return resultat.innerHTML= "<p> Bravo ! Vous avez gagné avec : "  + score +  " erreurs</p>";       
+    return resultat.innerHTML= "<p> Bravo ! Vous avez gagné avec : <br> "  + score +  " erreurs</p>";       
 }
 
 function verifierCaractere() {
@@ -144,9 +163,12 @@ function verifierCaractere() {
                 
                 motCache[i] = motAleatoire[i];   
                 mot.textContent = motCache.join("");
-                
+                if (mot.textContent != motAleatoire) {
+                    machine.play();
+                }
             }
             if(mot.textContent == motAleatoire) {
+                
                 victoire();
                 afficherResultat();
             }
@@ -156,6 +178,7 @@ function verifierCaractere() {
     } else {
         if (score < images.length-1) {
             score++
+            crayon.play();
             changerPhoto();
             verifierScore(); 
         }
@@ -189,7 +212,7 @@ function verifierScore() {
         
     }
     if(score == images.length-1) {        
-    resultat.innerHTML= "<p> Dommage ! Vous avez perdu, "+score+" erreurs</p>";
+    resultat.innerHTML= "<p> Dommage, vous avez perdu !  <br>le mot était : <span id='mot-revele'>"+motAleatoire+"</span> .</p>";
     desactiverBattement();
     cri.play();
     afficherResultat();
