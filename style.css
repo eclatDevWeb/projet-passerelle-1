@@ -152,12 +152,18 @@ footer {
 .coeur {
     
     box-shadow: 0 0 0 3500px rgba(255, 71, 84, .7);
-    -webkit-box-shadow: 0 0 0 3500px rgba(255, 71, 84, .7);
     animation: battement 1.8s infinite cubic-bezier(.66, 0, 0, 1);
+    -webkit-box-shadow: 0 0 0 3500px rgba(255, 71, 84, .7);
     -webkit-animation: battement 1.8s infinite cubic-bezier(.66, 0, 0, 1);
 }
 
 @keyframes battement {
+    to {
+      box-shadow: 0 0 0 3500px rgba(255, 71, 84, 0);
+    }
+  }
+
+@-webkit-keyframes battement {
     to {
       box-shadow: 0 0 0 3500px rgba(255, 71, 84, 0);
     }
