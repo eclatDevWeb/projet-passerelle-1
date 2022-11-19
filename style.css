@@ -165,7 +165,7 @@ footer {
 
 @-webkit-keyframes battement {
     to {
-      box-shadow: 0 0 0 3500px rgba(255, 71, 84, 0);
+      -webkit-box-shadow: 0 0 0 3500px rgba(255, 71, 84, 0);
     }
   }
 
