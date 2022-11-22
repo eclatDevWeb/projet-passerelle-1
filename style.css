@@ -34,12 +34,13 @@ main {
     flex-grow: 1;
     text-align: center;
     justify-content: center;
+    
 }
 #jeu {
     padding: 3em 0;
 }
 #mot {
-    margin: 0.3em 0 0.3em 0;
+    margin: 0 0 0.3em 0;
     font-size: 1.8em;
     font-family: 'roboto', Arial, Helvetica, sans-serif;
     text-transform: uppercase;
@@ -48,8 +49,7 @@ main {
     
 }
 #jeu img {
-    max-width: 100%;
-    
+    max-width: 100%;    
 }
 #rejouer {
     background-color: var(--happy-color);
@@ -61,7 +61,11 @@ main {
     max-width: 50%;
     margin: 0.9rem auto;
     padding: 0.5em 0.5em 0.7em 0.5em;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    
 }
+
 form, .resultat {
     max-width: 100%;
     background-color: var(--op-color);
@@ -88,8 +92,11 @@ form div {
 .resultat p {
     margin:0;
 }
+label {
+    font-size: 1.3em;
+}
 input {
-    border-radius: 8px;
+    border-radius: 4px;
     border: none;
     padding: 0;
     width: 70%;
@@ -98,10 +105,11 @@ input {
     text-align: center;
 }
 button{
-    border-radius: 30% 30% 10%;
+    border-radius: 30% 30% 4px;
     padding: 0.7em 1em;
     border: none;
     background-color: var(--happy-color);
+    
 }
 button:hover, #rejouer:hover {
     
@@ -110,7 +118,7 @@ button:hover, #rejouer:hover {
 }
 
 #faux h2{
-    margin: 0.4rem 0;
+    margin: 0 0 0.8rem 0;
     font-family: 'pacifico', 'Times New Roman', Times, serif;
 }
 #non {
@@ -135,11 +143,15 @@ button:hover, #rejouer:hover {
 }
 #champs {
     width: 100%;
-    padding: 0.5em 0;
+    padding: 1em 0;
+    
+}
+#champs div {
+    padding-top: 1em;
 }
 #mot-revele {
-    font-size: 1.8em;
-    text-decoration: underline;
+    font-size: 1.5em;
+    font-family: 'roboto', Arial, Helvetica, sans-serif;
     color: var(--happy-color);
 }
 footer {

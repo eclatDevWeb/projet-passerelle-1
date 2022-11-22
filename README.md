@@ -4,13 +4,9 @@ Believemy Projet 1 : Le pendu
 
 quelques idées de maj a venir après correction :
 
-## html
-
-- rajout des balises sociales (ommission)
-
 ## css
 
-- un peu de box-shadow sur les boutons et autres
+- un peu de style, plus tard
 
 ## programme principal
 
