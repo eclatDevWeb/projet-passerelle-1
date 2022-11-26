@@ -20,7 +20,7 @@ Le principe du jeu est de trouver le mot caché.
 ### Le joueur donne une mauvaise réponse:
 
 - Si la lettre proposé est incorrecte, l'image du pendu change, le mot caché reste inchangé et un "poisson" contenant les erreurs apparaît à l'écran. Un son de crayon à papier, dessinant sur du papier est joué.
-- lorsqu'il ne reste plus que 2 coups au joueurs, un son de battement de coeur ainsi qu'i animation sont joué.
+- lorsqu'il ne reste plus que 2 coups au joueurs, un son de battement de coeur, ainsi qu'une animation sont joué.
 - Si le joueurs atteint 6 erreurs, la partie est terminé, le mot est révélé et un son de cri est joué.
 
 ### Une fois la partie terminé
